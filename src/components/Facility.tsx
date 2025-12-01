@@ -51,7 +51,7 @@ const Facility = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Gallery */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
               <img
                 src={galleryImages[currentImage].src}
                 alt={galleryImages[currentImage].title}
