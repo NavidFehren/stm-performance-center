@@ -122,13 +122,13 @@ const ProgramCard = ({ program, className = "" }: ProgramCardProps) => (
       {/* Title & Meta */}
       <h3 className="text-xl font-display font-bold mb-2">{program.title}</h3>
       <div className="flex flex-wrap gap-2 mb-4">
-        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
+        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground border border-border/50">
           {program.level}
         </span>
-        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
+        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground border border-border/50">
           {program.duration}
         </span>
-        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
+        <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground border border-border/50">
           {program.frequency}
         </span>
       </div>

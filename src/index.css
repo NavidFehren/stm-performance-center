@@ -119,9 +119,9 @@
     display: none;
   }
 
-  /* Lock vertical scroll during horizontal swipe */
+  /* Allow both horizontal and vertical scrolling on touch */
   .touch-pan-x {
-    touch-action: pan-x;
+    touch-action: pan-x pan-y;
   }
 }
 
