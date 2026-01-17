@@ -158,6 +158,17 @@
   }
 }
 
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scale-in {
   from {
     opacity: 0;
@@ -185,6 +196,11 @@
   animation: slide-in-left 0.6s ease-out forwards;
 }
 
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s ease-out forwards;
+  opacity: 0;
+}
+
 .animate-scale-in {
   animation: scale-in 0.5s ease-out forwards;
 }
@@ -194,3 +210,21 @@
 .animation-delay-300 { animation-delay: 300ms; }
 .animation-delay-400 { animation-delay: 400ms; }
 .animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-600 { animation-delay: 600ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+
+/* Mobile menu hover gradient effect */
+.nav-item-hover {
+  @apply transition-all duration-300;
+}
+
+.nav-item-hover:hover .nav-item-text,
+.nav-item-hover:active .nav-item-text {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-fire);
+}
+
+.nav-item-hover:hover .nav-item-icon,
+.nav-item-hover:active .nav-item-icon {
+  @apply text-white;
+}

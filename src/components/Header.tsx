@@ -1,20 +1,54 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  Users,
+  Dumbbell,
+  Calendar,
+  Award,
+  Building2,
+  CreditCard,
+  MessageCircle,
+  ChevronRight,
+  type LucideIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetClose,
+} from "@/components/ui/sheet";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
-const navItems = [
-  { label: "Über uns", href: "#about" },
-  { label: "Programme", href: "#programs" },
-  { label: "Trainingsplan", href: "#schedule" },
-  { label: "Trainer", href: "#coaches" },
-  { label: "Ausstattung", href: "#facility" },
-  { label: "Preise", href: "#pricing" },
-  { label: "Kontakt", href: "#contact" },
+interface NavItem {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+}
+
+const navItems: NavItem[] = [
+  { label: "Über uns", href: "#about", icon: Users },
+  { label: "Programme", href: "#programs", icon: Dumbbell },
+  { label: "Trainingsplan", href: "#schedule", icon: Calendar },
+  { label: "Trainer", href: "#coaches", icon: Award },
+  { label: "Ausstattung", href: "#facility", icon: Building2 },
+  { label: "Preise", href: "#pricing", icon: CreditCard },
+  { label: "Kontakt", href: "#contact", icon: MessageCircle },
+];
+
+const animationDelays = [
+  "animation-delay-100",
+  "animation-delay-200",
+  "animation-delay-300",
+  "animation-delay-400",
+  "animation-delay-500",
+  "animation-delay-600",
+  "animation-delay-700",
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,38 +93,70 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border animate-fade-up">
-            <nav className="flex flex-col py-6 gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                className="lg:hidden p-2 text-foreground"
+                aria-label="Menü öffnen"
+              >
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-full sm:w-80 bg-background border-l border-border p-0">
+              <VisuallyHidden.Root>
+                <SheetTitle>Navigation</SheetTitle>
+              </VisuallyHidden.Root>
+              
+              {/* Sheet Header with Logo */}
+              <div className="flex items-center justify-between p-6 border-b border-border">
+                <a href="#" className="flex items-center gap-2">
+                  <span className="font-display text-xl font-bold tracking-tight">
+                    STM<span className="gradient-text">Performance</span>
+                  </span>
                 </a>
-              ))}
-              <div className="px-4 pt-4">
-                <Button variant="hero" size="lg" className="w-full" asChild>
-                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Kostenloses Probetraining</a>
-                </Button>
               </div>
-            </nav>
-          </div>
-        )}
+
+              {/* Navigation Items */}
+              <nav className="flex flex-col py-6">
+                {navItems.map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <SheetClose asChild key={item.label}>
+                      <a
+                        href={item.href}
+                        className={`nav-item-hover group flex items-center justify-between min-h-16 px-6 animate-slide-in-right ${animationDelays[index]}`}
+                      >
+                        <div className="flex items-center gap-4">
+                          <IconComponent 
+                            size={22} 
+                            className="nav-item-icon text-muted-foreground transition-colors duration-300" 
+                          />
+                          <span className="nav-item-text font-display text-2xl font-bold tracking-wide text-muted-foreground transition-all duration-300">
+                            {item.label}
+                          </span>
+                        </div>
+                        <ChevronRight 
+                          size={20} 
+                          className="text-muted-foreground/50 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" 
+                        />
+                      </a>
+                    </SheetClose>
+                  );
+                })}
+              </nav>
+
+              {/* CTA Button */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-background">
+                <SheetClose asChild>
+                  <Button variant="hero" size="lg" className="w-full animate-slide-in-right animation-delay-700" asChild>
+                    <a href="#contact">Kostenloses Probetraining</a>
+                  </Button>
+                </SheetClose>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
