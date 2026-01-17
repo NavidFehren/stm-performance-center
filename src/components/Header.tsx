@@ -75,7 +75,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -88,7 +88,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button variant="hero" size="lg" asChild>
               <a href="#contact">Kostenloses Probetraining</a>
             </Button>
@@ -98,7 +98,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <button
-                className="lg:hidden p-2 text-foreground"
+                className="xl:hidden p-2 text-foreground"
                 aria-label="Menü öffnen"
               >
                 <Menu size={24} />

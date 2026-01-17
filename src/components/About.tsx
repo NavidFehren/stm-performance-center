@@ -64,7 +64,7 @@ const About = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title} 
-              className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-card/50 border border-border/50 card-hover"
+              className="flex flex-col items-center text-center xl:flex-row xl:items-start xl:text-left gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-card/50 border border-border/50 card-hover"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="p-2 rounded-lg bg-primary/10 shrink-0">
