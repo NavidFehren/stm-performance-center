@@ -15,12 +15,12 @@ const faqs = [
     answer: "Für deine erste Stunde bringe einfach Trainingskleidung (T-Shirt, Shorts), eine Wasserflasche und ein Handtuch mit. Wir stellen alle notwendigen Ausrüstungsgegenstände wie Handschuhe und Schützer für Anfänger zur Verfügung. Sobald du dich entscheidest, weiter zu trainieren, können wir dir bei der Auswahl der Ausrüstung beraten.",
   },
   {
-    question: "Gibt es eine Mindestvertragslaufzeit?",
-    answer: "Die Standardlaufzeit beträgt 24 Monate. Es gibt auch eine 12-Monats-Option oder eine monatlich kündbare Mitgliedschaft. Der Vertrag verlängert sich automatisch um 1 Monat, falls nicht vor Ablauf der Vertragslaufzeit gekündigt wird. Die Kündigung erfolgt schriftlich per E-Mail oder Einschreiben.",
+    question: "Kann ich eine Stunde ausprobieren, bevor ich mich anmelde?",
+    answer: "Ja! Wir bieten ein kostenloses Probetraining für neue Mitglieder an. So kannst du unser Training erleben, die Trainer kennenlernen und sehen, ob STM Performance Center das Richtige für dich ist. Kontaktiere uns einfach, um dein Probetraining zu vereinbaren.",
   },
   {
-    question: "Wie oft sollte ich als Anfänger trainieren?",
-    answer: "Wir empfehlen, mit 2-3 Einheiten pro Woche zu beginnen, damit sich dein Körper anpassen kann. Wenn du Kondition und Selbstvertrauen aufbaust, kannst du die Häufigkeit erhöhen. Unsere Trainer helfen dir, einen Trainingsplan zu erstellen, der zu deinen Zielen und deinem Lebensstil passt.",
+    question: "Welche Trainingsprogramme werden angeboten?",
+    answer: "Wir bieten ein breites Spektrum an Trainingsprogrammen: Kampfsport (Boxen, Thai-Boxen/K1, BJJ/Nogi, MMA), Kraftausdauer, Senioren Club, Yoga und Krabbel Club. Für Kinder und Jugendliche haben wir spezielle Programme: Mini Club (3-6 Jahre), Kids MMA (7-11 Jahre) und Youth MMA (12-16 Jahre). Alle Programme sind für verschiedene Erfahrungslevel geeignet.",
   },
   {
     question: "Trainieren Kinder getrennt von Erwachsenen?",
@@ -28,23 +28,15 @@ const faqs = [
   },
   {
     question: "Was, wenn ich nur eine Disziplin trainieren möchte (z.B. nur BJJ)?",
-    answer: "Das ist völlig in Ordnung! Während unsere Vollmitgliedschaft dir Zugang zu allen Programmen gibt, konzentrieren sich viele Mitglieder auf eine spezifische Disziplin. Unser Stundenplan bietet mehrere Kurse pro Woche in jeder Disziplin, damit du kontinuierlich trainieren kannst.",
+    answer: "Das ist völlig in Ordnung! Während unsere Vollmitgliedschaft dir Zugang zu allen Programmen gibt, konzentrieren sich viele Mitglieder auf eine spezifische Disziplin. Unser Trainingsplan bietet mehrere Kurse pro Woche in jeder Disziplin, damit du kontinuierlich trainieren kannst.",
   },
   {
     question: "Ist MMA-Training sicher?",
     answer: "Sicherheit hat für uns oberste Priorität. Alle Sparring-Einheiten sind kontrolliert und überwacht, und wir zwingen niemanden zum Sparring. Unsere Trainer legen Wert auf richtige Technik, um Verletzungen zu vermeiden, und wir verlangen von allen Sparring-Teilnehmern, geeignete Schutzausrüstung zu tragen.",
   },
   {
-    question: "Kann ich eine Stunde ausprobieren, bevor ich mich anmelde?",
-    answer: "Ja! Wir bieten ein kostenloses Probetraining für neue Mitglieder an. So kannst du unser Training erleben, die Trainer kennenlernen und sehen, ob STM Performance Center das Richtige für dich ist. Kontaktiere uns einfach, um dein Probetraining zu vereinbaren.",
-  },
-  {
-    question: "Wie funktioniert die Zahlung?",
-    answer: "Die Zahlung erfolgt monatlich per Lastschriftverfahren, spätestens zum ersten eines Monats. Der Monatsbeitrag wird widerruflich vom angegebenen Konto abgebucht. Alle Preise verstehen sich inklusive der gesetzlichen MwSt. von 19%. Es fällt eine einmalige Bearbeitungsgebühr von 59€ und eine jährliche Aufwandgebühr von 29€ (im Oktober) an.",
-  },
-  {
-    question: "Was passiert bei Sonderschließungen?",
-    answer: "Der Beitrag bleibt auch bei Sonderschließungen (z.B. Pandemie, Wasserschaden, Brandschaden, höhere Gewalt) zahlungspflichtig. Dies ist in unseren allgemeinen Bedingungen festgelegt.",
+    question: "Welche Ausstattung hat das Gym?",
+    answer: "Unser Gym umfasst 800qm Gesamtfläche mit 2 Trainingsflächen (300qm große Trainingsfläche und 100qm zweite Trainingsfläche), einen Cage (8x8 Meter), einen Fitness-Bereich, große Umkleidekabinen mit Duschen und Toiletten, einen eigenen Saunabereich mit Lounge sowie eine zusätzliche Theken-Lounge für Eltern und Mitglieder neben der Trainingsfläche.",
   },
 ];
 
