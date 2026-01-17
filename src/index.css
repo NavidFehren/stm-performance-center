@@ -118,6 +118,11 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Lock vertical scroll during horizontal swipe */
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
 }
 
 /* Custom animations */

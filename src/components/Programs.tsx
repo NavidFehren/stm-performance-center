@@ -247,7 +247,7 @@ const OptionBCarousel = () => (
           <ProgramCard key={program.title} program={program} />
         ))}
       </div>
-      <div className="lg:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
+      <div className="lg:hidden overflow-x-auto scrollbar-hide touch-pan-x -mx-4 px-4">
         <div className="flex gap-4" style={{ width: 'max-content' }}>
           {kampfsportPrograms.map((program, index) => (
             <div 
@@ -274,7 +274,7 @@ const OptionBCarousel = () => (
           <ProgramCard key={program.title} program={program} />
         ))}
       </div>
-      <div className="md:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
+      <div className="md:hidden overflow-x-auto scrollbar-hide touch-pan-x -mx-4 px-4">
         <div className="flex gap-4" style={{ width: 'max-content' }}>
           {kinderPrograms.map((program, index) => (
             <div 
@@ -301,7 +301,7 @@ const OptionBCarousel = () => (
           <ProgramCard key={program.title} program={program} />
         ))}
       </div>
-      <div className="sm:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
+      <div className="sm:hidden overflow-x-auto scrollbar-hide touch-pan-x -mx-4 px-4">
         <div className="flex gap-4" style={{ width: 'max-content' }}>
           {wellnessPrograms.map((program, index) => (
             <div 
