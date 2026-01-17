@@ -1,5 +1,11 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import gym1 from "@/assets/gym-1.jpg";
 import gym2 from "@/assets/gym-2.jpg";
 import gym3 from "@/assets/gym-3.jpg";
@@ -24,15 +30,21 @@ const features = [
 ];
 
 const Facility = () => {
+  const [api, setApi] = useState<CarouselApi>();
   const [currentImage, setCurrentImage] = useState(0);
 
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % galleryImages.length);
-  };
+  useEffect(() => {
+    if (!api) return;
 
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
+    const onSelect = () => {
+      setCurrentImage(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
 
   return (
     <section id="facility" className="section-padding bg-gradient-dark">
@@ -51,20 +63,32 @@ const Facility = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Gallery */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
-              <img
-                src={galleryImages[currentImage].src}
-                alt={galleryImages[currentImage].title}
-                className="w-full h-full object-cover transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              
-              {/* Image Info */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-xl font-display font-bold">{galleryImages[currentImage].title}</h3>
-                <p className="text-muted-foreground text-sm">{galleryImages[currentImage].description}</p>
-              </div>
-            </div>
+            <Carousel
+              setApi={setApi}
+              opts={{ loop: true }}
+              className="rounded-2xl overflow-hidden"
+            >
+              <CarouselContent className="ml-0">
+                {galleryImages.map((img, index) => (
+                  <CarouselItem key={index} className="pl-0">
+                    <div className="aspect-[4/3] relative">
+                      <img
+                        src={img.src}
+                        alt={img.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                      
+                      {/* Image Info */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-display font-bold">{img.title}</h3>
+                        <p className="text-muted-foreground text-sm">{img.description}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
 
             {/* Navigation */}
             <div className="flex items-center justify-between mt-4">
@@ -72,7 +96,7 @@ const Facility = () => {
                 {galleryImages.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentImage(index)}
+                    onClick={() => api?.scrollTo(index)}
                     className={`w-2 h-2 rounded-full transition-all ${
                       index === currentImage ? "bg-primary w-6" : "bg-muted hover:bg-muted-foreground"
                     }`}
@@ -82,14 +106,14 @@ const Facility = () => {
               </div>
               <div className="flex gap-2">
                 <button
-                  onClick={prevImage}
+                  onClick={() => api?.scrollPrev()}
                   className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={nextImage}
+                  onClick={() => api?.scrollNext()}
                   className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                   aria-label="Next image"
                 >
@@ -103,7 +127,7 @@ const Facility = () => {
               {galleryImages.map((img, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentImage(index)}
+                  onClick={() => api?.scrollTo(index)}
                   className={`aspect-video rounded-lg overflow-hidden border-2 transition-all ${
                     index === currentImage ? "border-primary" : "border-transparent opacity-60 hover:opacity-100"
                   }`}
