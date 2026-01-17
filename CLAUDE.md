@@ -83,6 +83,10 @@ const ComponentName = () => {
 export default ComponentName;
 ```
 
+## Development
+
+- **Development Server:** http://localhost:8080/stm-performance-center/
+
 ## Git Conventions
 
 - **Commit messages:** Always in English
