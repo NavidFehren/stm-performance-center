@@ -69,7 +69,7 @@ const Pricing = () => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl p-8 ${
+              className={`relative rounded-2xl p-8 flex flex-col h-full ${
                 plan.popular
                   ? "bg-gradient-to-b from-primary/20 to-card border-2 border-primary"
                   : "bg-card border border-border"
@@ -77,7 +77,7 @@ const Pricing = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                  <span className="inline-flex items-center gap-1 px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-semibold whitespace-nowrap">
                     <Star className="w-4 h-4" />
                     Beliebteste Option
                   </span>
@@ -104,50 +104,52 @@ const Pricing = () => {
                 ))}
               </ul>
 
+              <div className="mt-auto">
               <Button
                 variant={plan.popular ? "hero" : "outline"}
                 size="lg"
                 className="w-full"
+                asChild
               >
-                {plan.cta}
+                <a href="#contact">{plan.cta}</a>
               </Button>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 space-y-6">
-          <div className="p-6 rounded-xl bg-card border border-border">
-            <h4 className="font-display font-bold mb-4">Kinder- und Jugendprogramme</h4>
-            <div className="grid sm:grid-cols-2 gap-4 text-left">
-              <div>
-                <p className="text-sm font-medium mb-1">Mini Club (3-6 Jahre)</p>
-                <p className="text-muted-foreground text-sm">50€/Monat</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium mb-1">Kids MMA (7-11 Jahre)</p>
-                <p className="text-muted-foreground text-sm">65€/Monat</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium mb-1">Youth MMA (12-16 Jahre)</p>
-                <p className="text-muted-foreground text-sm">75€/Monat</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium mb-1">FightClubFlat (ab 17 Jahre)</p>
-                <p className="text-muted-foreground text-sm">89€/Monat</p>
+        <div className="mt-16 p-6 rounded-xl bg-card border border-border">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-display font-bold mb-4">Kinder- und Jugendprogramme</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">Mini Club (3-6 Jahre)</span>
+                  <span className="text-sm font-medium">50€/Monat</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">Kids MMA (7-11 Jahre)</span>
+                  <span className="text-sm font-medium">65€/Monat</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">Youth MMA (12-16 Jahre)</span>
+                  <span className="text-sm font-medium">75€/Monat</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h4 className="font-display font-bold mb-2">Weitere Angebote</h4>
-              <p className="text-muted-foreground text-sm mb-2">10er Karte: 250€</p>
-              <p className="text-muted-foreground text-sm">Sauna (monatlich): +15€</p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h4 className="font-display font-bold mb-2">Zusätzliche Gebühren</h4>
-              <p className="text-muted-foreground text-sm mb-2">Einmalige Bearbeitungsgebühr: 59€</p>
-              <p className="text-muted-foreground text-sm">Jährliche Aufwandgebühr (Oktober): 29€</p>
+            <div>
+              <h4 className="font-display font-bold mb-4">Weitere Angebote</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">10er Karte</span>
+                  <span className="text-sm font-medium">250€</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">Sauna (monatlich)</span>
+                  <span className="text-sm font-medium">+15€</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
