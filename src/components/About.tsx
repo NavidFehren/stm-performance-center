@@ -31,11 +31,11 @@ const About = () => {
           {/* Content */}
           <div>
             <span className="text-primary font-display uppercase tracking-widest text-sm">Über uns</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-              MEHR ALS EIN GYM.
-              <span className="block gradient-text">EIN PERFORMANCE CENTER.</span>
+            <h2 className="font-display font-bold mt-4 mb-6">
+              <span className="block text-2xl md:text-3xl text-muted-foreground">MEHR ALS EIN GYM.</span>
+              <span className="block text-4xl md:text-6xl gradient-text">EIN PERFORMANCE CENTER.</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-6">
+            <p className="text-muted-foreground mb-6">
               STM Performance Center ist der Ort, an dem ernsthafte Athleten sich weiterentwickeln. Wir haben eine Trainingsumgebung geschaffen, die die Lücke zwischen traditionellen Kampfkünsten und moderner Sportwissenschaft schließt.
             </p>
             <p className="text-muted-foreground mb-8">
