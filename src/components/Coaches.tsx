@@ -1,9 +1,19 @@
-import { Instagram, Award } from "lucide-react";
+import { Instagram, Award, Crown } from "lucide-react";
 import coach1 from "@/assets/coach-1.jpg";
 import coach2 from "@/assets/coach-2.jpg";
 import coach3 from "@/assets/coach-3.jpg";
 
-const coaches = [
+const headCoach = {
+  name: "Anatolij",
+  role: "Head Coach — Kraftausdauer, Boxen, MMA, BJJ",
+  image: coach1,
+  bio: "Vielseitiger Trainer mit Expertise in Kraftausdauer, Boxen, MMA und BJJ. Spezialisiert auf Kinder- und Jugendtraining.",
+  credentials: ["Kraftausdauer", "Boxen", "MMA", "BJJ", "Jugend"],
+  instagram: "#",
+  isHeadCoach: true,
+};
+
+const cotrainers = [
   {
     name: "Marc",
     role: "Trainer — KickBoxen, ThaiBoxen",
@@ -26,14 +36,6 @@ const coaches = [
     image: coach3,
     bio: "Spezialist für Brazilian Jiu-Jitsu. Entwickelt Grappling-Fähigkeiten für Anfänger und Fortgeschrittene.",
     credentials: ["BJJ", "Brazilian Jiu-Jitsu", "Grappling"],
-    instagram: "#",
-  },
-  {
-    name: "Anatolij",
-    role: "Trainer — Kraftausdauer, Boxen, MMA, BJJ",
-    image: coach1,
-    bio: "Vielseitiger Trainer mit Expertise in Kraftausdauer, Boxen, MMA und BJJ. Spezialisiert auf Kinder- und Jugendtraining.",
-    credentials: ["Kraftausdauer", "Boxen", "MMA", "BJJ", "Jugend"],
     instagram: "#",
   },
   {
@@ -69,9 +71,66 @@ const Coaches = () => {
           </p>
         </div>
 
-        {/* Coaches Grid */}
+        {/* Head Coach Section */}
+        {headCoach && (
+          <div className="mb-16 flex justify-center">
+            <div className="group relative bg-card rounded-2xl overflow-hidden gradient-border w-full max-w-3xl shadow-glow">
+              {/* Head Coach Badge */}
+              <div className="absolute top-4 right-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/90 backdrop-blur-sm">
+                <Crown className="w-4 h-4 text-background" />
+                <span className="text-xs font-display font-bold text-background uppercase tracking-wider">
+                  Head Coach
+                </span>
+              </div>
+
+              {/* Image */}
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={headCoach.image}
+                  alt={headCoach.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-display font-bold">{headCoach.name}</h3>
+                    <p className="text-primary text-base font-medium mt-1">{headCoach.role}</p>
+                  </div>
+                  <a
+                    href={headCoach.instagram}
+                    className="p-2 rounded-full bg-secondary hover:bg-primary transition-colors"
+                    aria-label={`${headCoach.name}'s Instagram`}
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                </div>
+
+                <p className="text-base text-muted-foreground mb-5">{headCoach.bio}</p>
+
+                {/* Credentials */}
+                <div className="flex flex-wrap gap-2">
+                  {headCoach.credentials.map((cred) => (
+                    <span
+                      key={cred}
+                      className="inline-flex items-center gap-1 text-sm px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground"
+                    >
+                      <Award className="w-4 h-4 text-primary" />
+                      {cred}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Cotrainers Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {coaches.map((coach, index) => (
+          {cotrainers.map((coach) => (
             <div
               key={coach.name}
               className="group relative bg-card rounded-2xl overflow-hidden border border-border card-hover"
