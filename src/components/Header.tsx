@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   Menu,
+  X,
   Users,
   Dumbbell,
   Calendar,
@@ -103,18 +104,22 @@ const Header = () => {
                 <Menu size={24} />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-80 bg-background border-l border-border p-0">
+            <SheetContent side="right" className="w-full sm:w-80 bg-background border-l border-border p-0" hideCloseButton>
               <VisuallyHidden.Root>
                 <SheetTitle>Navigation</SheetTitle>
               </VisuallyHidden.Root>
               
-              {/* Sheet Header with Logo */}
+              {/* Sheet Header with Logo and Close Button */}
               <div className="flex items-center justify-between p-6 border-b border-border">
                 <a href="#" className="flex items-center gap-2">
                   <span className="font-display text-xl font-bold tracking-tight">
                     STM<span className="gradient-text">Performance</span>
                   </span>
                 </a>
+                <SheetClose className="p-2 -mr-2 text-muted-foreground hover:text-white transition-colors">
+                  <X size={24} />
+                  <span className="sr-only">Menü schließen</span>
+                </SheetClose>
               </div>
 
               {/* Navigation Items */}
