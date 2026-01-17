@@ -43,8 +43,8 @@ const Hero = () => {
             <Button variant="hero" size="xl">
               Book Free Trial
             </Button>
-            <Button variant="heroOutline" size="xl">
-              View Schedule
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#schedule">View Schedule</a>
             </Button>
           </div>
           
