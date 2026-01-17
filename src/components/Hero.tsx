@@ -49,18 +49,18 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/50 animate-fade-up animation-delay-400">
-            <div>
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">6</div>
-              <div className="text-sm text-muted-foreground mt-1">Erfahrene Trainer</div>
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 pt-8 border-t border-border/50 animate-fade-up animation-delay-400">
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold gradient-text">6</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-1">Erfahrene Trainer</div>
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">800</div>
-              <div className="text-sm text-muted-foreground mt-1">Quadratmeter</div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold gradient-text">800</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-1">Quadratmeter</div>
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">10+</div>
-              <div className="text-sm text-muted-foreground mt-1">Trainingsprogramme</div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold gradient-text">10+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-1">Trainingsprogramme</div>
             </div>
           </div>
         </div>
