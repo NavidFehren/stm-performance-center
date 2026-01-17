@@ -60,14 +60,14 @@ const About = () => {
         </p>
         
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {features.map((feature, index) => (
             <div 
               key={feature.title} 
-              className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-border/50 card-hover"
+              className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-card/50 border border-border/50 card-hover"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="p-2 rounded-lg bg-primary/10">
+              <div className="p-2 rounded-lg bg-primary/10 shrink-0">
                 <feature.icon className="w-5 h-5 text-primary" />
               </div>
               <div>
