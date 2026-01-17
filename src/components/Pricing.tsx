@@ -3,48 +3,48 @@ import { Button } from "@/components/ui/button";
 
 const plans = [
   {
-    name: "Day Pass",
-    price: "$25",
-    period: "single visit",
-    description: "Perfect for drop-ins and visitors",
+    name: "24 Monate",
+    price: "89€",
+    period: "pro Monat",
+    description: "Langfristige Mitgliedschaft mit bestem Preis",
     features: [
-      "Access to all classes",
-      "Open gym access",
-      "Locker room access",
-      "Equipment included",
+      "Zugang zu allen Kursen",
+      "Offenes Training",
+      "Alle Trainingsprogramme",
+      "24 Monate Laufzeit",
+      "Inkl. MwSt. (19%)",
     ],
-    cta: "Get Day Pass",
-    popular: false,
-  },
-  {
-    name: "Monthly Unlimited",
-    price: "$199",
-    period: "per month",
-    description: "Full access for serious athletes",
-    features: [
-      "Unlimited classes",
-      "Open gym access",
-      "S&C programming",
-      "Member events",
-      "Locker & towel service",
-      "Guest passes (2/month)",
-    ],
-    cta: "Start Membership",
+    cta: "Mitgliedschaft starten",
     popular: true,
   },
   {
-    name: "10-Class Pack",
-    price: "$180",
-    period: "10 classes",
-    description: "Flexible training on your schedule",
+    name: "12 Monate",
+    price: "99€",
+    period: "pro Monat",
+    description: "Jahresmitgliedschaft mit gutem Preis-Leistungs-Verhältnis",
     features: [
-      "10 class credits",
-      "Valid for 3 months",
-      "Any class type",
-      "Open gym access",
-      "No commitment",
+      "Zugang zu allen Kursen",
+      "Offenes Training",
+      "Alle Trainingsprogramme",
+      "12 Monate Laufzeit",
+      "Inkl. MwSt. (19%)",
     ],
-    cta: "Buy Class Pack",
+    cta: "Mitgliedschaft starten",
+    popular: false,
+  },
+  {
+    name: "Monatlich kündbar",
+    price: "129€",
+    period: "pro Monat",
+    description: "Flexibel ohne lange Bindung",
+    features: [
+      "Zugang zu allen Kursen",
+      "Offenes Training",
+      "Alle Trainingsprogramme",
+      "Monatlich kündbar",
+      "Inkl. MwSt. (19%)",
+    ],
+    cta: "Mitgliedschaft starten",
     popular: false,
   },
 ];
@@ -55,12 +55,12 @@ const Pricing = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-display uppercase tracking-widest text-sm">Memberships</span>
+          <span className="text-primary font-display uppercase tracking-widest text-sm">Mitgliedschaften</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-            INVEST IN YOUR <span className="gradient-text">POTENTIAL</span>
+            INVESTIERE IN DEIN <span className="gradient-text">POTENZIAL</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Simple, transparent pricing. No hidden fees, no long-term contracts. Just world-class training.
+            Einfache, transparente Preise. Alle Preise inkl. MwSt. (19%). Professionelles Training für jeden.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
                     <Star className="w-4 h-4" />
-                    Most Popular
+                    Beliebteste Option
                   </span>
                 </div>
               )}
@@ -116,18 +116,39 @@ const Pricing = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
+        <div className="mt-16 space-y-6">
           <div className="p-6 rounded-xl bg-card border border-border">
-            <h4 className="font-display font-bold mb-2">Student Discount</h4>
-            <p className="text-muted-foreground text-sm">20% off monthly memberships with valid student ID</p>
+            <h4 className="font-display font-bold mb-4">Kinder- und Jugendprogramme</h4>
+            <div className="grid sm:grid-cols-2 gap-4 text-left">
+              <div>
+                <p className="text-sm font-medium mb-1">Mini Club (3-6 Jahre)</p>
+                <p className="text-muted-foreground text-sm">50€/Monat</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium mb-1">Kids MMA (7-11 Jahre)</p>
+                <p className="text-muted-foreground text-sm">65€/Monat</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium mb-1">Youth MMA (12-16 Jahre)</p>
+                <p className="text-muted-foreground text-sm">75€/Monat</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium mb-1">FightClubFlat (ab 17 Jahre)</p>
+                <p className="text-muted-foreground text-sm">89€/Monat</p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 rounded-xl bg-card border border-border">
-            <h4 className="font-display font-bold mb-2">Family Plans</h4>
-            <p className="text-muted-foreground text-sm">15% off per additional family member</p>
-          </div>
-          <div className="p-6 rounded-xl bg-card border border-border">
-            <h4 className="font-display font-bold mb-2">Annual Savings</h4>
-            <p className="text-muted-foreground text-sm">Pay yearly and get 2 months free</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-xl bg-card border border-border">
+              <h4 className="font-display font-bold mb-2">Weitere Angebote</h4>
+              <p className="text-muted-foreground text-sm mb-2">10er Karte: 250€</p>
+              <p className="text-muted-foreground text-sm">Sauna (monatlich): +15€</p>
+            </div>
+            <div className="p-6 rounded-xl bg-card border border-border">
+              <h4 className="font-display font-bold mb-2">Zusätzliche Gebühren</h4>
+              <p className="text-muted-foreground text-sm mb-2">Einmalige Bearbeitungsgebühr: 59€</p>
+              <p className="text-muted-foreground text-sm">Jährliche Aufwandgebühr (Oktober): 29€</p>
+            </div>
           </div>
         </div>
       </div>

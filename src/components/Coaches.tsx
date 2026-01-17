@@ -5,27 +5,51 @@ import coach3 from "@/assets/coach-3.jpg";
 
 const coaches = [
   {
-    name: "Marcus Silva",
-    role: "Head Coach — MMA",
+    name: "Marc",
+    role: "Trainer — KickBoxen, ThaiBoxen",
     image: coach1,
-    bio: "Former professional MMA fighter with 15+ years experience. Black belt in Brazilian Jiu-Jitsu and certified strength & conditioning coach.",
-    credentials: ["Pro MMA Record: 18-4", "BJJ Black Belt", "CSCS Certified"],
+    bio: "Erfahrener Trainer für Kickboxen und Thai-Boxen. Spezialisiert auf die Entwicklung von Stand-Up-Fähigkeiten für alle Level.",
+    credentials: ["KickBoxen", "ThaiBoxen", "Erfahrung"],
     instagram: "#",
   },
   {
-    name: "Ana Torres",
-    role: "Head Coach — BJJ",
+    name: "Paul",
+    role: "Trainer — KickBoxen, ThaiBoxen",
     image: coach2,
-    bio: "3rd degree BJJ black belt with multiple world championship titles. Specializes in developing competition-ready grapplers of all levels.",
-    credentials: ["3x World Champion", "3rd Degree Black Belt", "10+ Years Coaching"],
+    bio: "Professioneller Trainer für Kickboxen und Thai-Boxen. Fokus auf Technik, Kraft und Wettkampfvorbereitung.",
+    credentials: ["KickBoxen", "ThaiBoxen", "Wettkampf"],
     instagram: "#",
   },
   {
-    name: "Jake \"Thunder\" Mitchell",
-    role: "Head Coach — Striking",
+    name: "Axel",
+    role: "Trainer — BJJ",
     image: coach3,
-    bio: "Former professional boxer and Muay Thai champion. Known for developing elite striking skills in MMA fighters and beginners alike.",
-    credentials: ["Pro Boxing: 24-2", "Muay Thai Champion", "Boxing Trainer Cert."],
+    bio: "Spezialist für Brazilian Jiu-Jitsu. Entwickelt Grappling-Fähigkeiten für Anfänger und Fortgeschrittene.",
+    credentials: ["BJJ", "Brazilian Jiu-Jitsu", "Grappling"],
+    instagram: "#",
+  },
+  {
+    name: "Anatolij",
+    role: "Trainer — Kraftausdauer, Boxen, MMA, BJJ",
+    image: coach1,
+    bio: "Vielseitiger Trainer mit Expertise in Kraftausdauer, Boxen, MMA und BJJ. Spezialisiert auf Kinder- und Jugendtraining.",
+    credentials: ["Kraftausdauer", "Boxen", "MMA", "BJJ", "Jugend"],
+    instagram: "#",
+  },
+  {
+    name: "Anastasia",
+    role: "Trainerin — Kids Club, Krabbelgruppe",
+    image: coach2,
+    bio: "Erfahrene Trainerin für den Kids Club und die Krabbelgruppe. Spezialisiert auf altersgerechtes Training für die Kleinsten.",
+    credentials: ["Kids Club", "Krabbelgruppe", "Kinderbetreuung"],
+    instagram: "#",
+  },
+  {
+    name: "Daniel",
+    role: "Trainer — Kids Club, Krabbelgruppe",
+    image: coach3,
+    bio: "Engagierter Trainer für den Kids Club und die Krabbelgruppe. Fokus auf Spaß, Sicherheit und Entwicklung.",
+    credentials: ["Kids Club", "Krabbelgruppe", "Kinderbetreuung"],
     instagram: "#",
   },
 ];
@@ -36,12 +60,12 @@ const Coaches = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-display uppercase tracking-widest text-sm">Our Team</span>
+          <span className="text-primary font-display uppercase tracking-widest text-sm">Unser Team</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-            LEARN FROM THE <span className="gradient-text">BEST</span>
+            LERNE VON DEN <span className="gradient-text">BESTEN</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Our coaches aren't just instructors — they're accomplished athletes who have competed at the highest levels and now dedicate themselves to developing the next generation.
+            Unsere Trainer sind nicht nur Instruktoren - sie sind erfahrene Athleten, die sich der Entwicklung der nächsten Generation widmen.
           </p>
         </div>
 
@@ -100,20 +124,20 @@ const Coaches = () => {
         {/* Team Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border">
           <div className="text-center">
-            <div className="text-4xl font-display font-bold gradient-text">100+</div>
-            <div className="text-muted-foreground mt-2">Years Combined Experience</div>
+            <div className="text-4xl font-display font-bold gradient-text">6</div>
+            <div className="text-muted-foreground mt-2">Erfahrene Trainer</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-display font-bold gradient-text">15</div>
-            <div className="text-muted-foreground mt-2">Black Belts on Staff</div>
+            <div className="text-4xl font-display font-bold gradient-text">10+</div>
+            <div className="text-muted-foreground mt-2">Trainingsprogramme</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-display font-bold gradient-text">50+</div>
-            <div className="text-muted-foreground mt-2">Championship Titles</div>
+            <div className="text-4xl font-display font-bold gradient-text">800</div>
+            <div className="text-muted-foreground mt-2">Quadratmeter</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-display font-bold gradient-text">5</div>
-            <div className="text-muted-foreground mt-2">Languages Spoken</div>
+            <div className="text-4xl font-display font-bold gradient-text">Alle</div>
+            <div className="text-muted-foreground mt-2">Altersgruppen</div>
           </div>
         </div>
       </div>

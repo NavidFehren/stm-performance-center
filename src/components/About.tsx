@@ -3,23 +3,23 @@ import { Target, Users, Trophy, Zap } from "lucide-react";
 const features = [
   {
     icon: Target,
-    title: "Performance-Focused",
-    description: "Every program is designed to maximize your athletic potential through science-backed training methods.",
+    title: "Leistungsorientiert",
+    description: "Jedes Programm ist darauf ausgelegt, dein athletisches Potenzial durch wissenschaftlich fundierte Trainingsmethoden zu maximieren.",
   },
   {
     icon: Users,
-    title: "Expert Coaching",
-    description: "Learn from professional fighters and certified coaches with decades of combined experience.",
+    title: "Erfahrene Trainer",
+    description: "Lerne von erfahrenen Kämpfern und zertifizierten Trainern mit jahrelanger Erfahrung.",
   },
   {
     icon: Trophy,
-    title: "Proven Results",
-    description: "Our athletes compete at the highest levels, from amateur championships to professional promotions.",
+    title: "Bewährte Ergebnisse",
+    description: "Unsere Athleten konkurrieren auf höchstem Niveau, von Amateur-Meisterschaften bis zu professionellen Veranstaltungen.",
   },
   {
     icon: Zap,
-    title: "Complete Training",
-    description: "From striking to grappling, strength to conditioning — everything you need under one roof.",
+    title: "Vollständiges Training",
+    description: "Von Schlägen bis Grappling, Kraft bis Kondition - alles was du brauchst unter einem Dach.",
   },
 ];
 
@@ -30,16 +30,16 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="text-primary font-display uppercase tracking-widest text-sm">About Us</span>
+            <span className="text-primary font-display uppercase tracking-widest text-sm">Über uns</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-              MORE THAN A GYM.
-              <span className="block gradient-text">A PERFORMANCE CENTER.</span>
+              MEHR ALS EIN GYM.
+              <span className="block gradient-text">EIN PERFORMANCE CENTER.</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              APEX MMA is where serious athletes come to evolve. Founded by professional fighters and performance coaches, we've built a training environment that bridges the gap between traditional martial arts and modern sports science.
+              STM Performance Center ist der Ort, an dem ernsthafte Athleten sich weiterentwickeln. Wir haben eine Trainingsumgebung geschaffen, die die Lücke zwischen traditionellen Kampfkünsten und moderner Sportwissenschaft schließt.
             </p>
             <p className="text-muted-foreground mb-8">
-              Whether you're stepping onto the mats for the first time or preparing for your next fight, our personalized approach ensures you'll receive world-class instruction in a supportive, ego-free environment. We believe in building complete athletes — strong, technical, and mentally resilient.
+              Ob du zum ersten Mal auf die Matte trittst oder dich auf deinen nächsten Kampf vorbereitest - unser personalisierter Ansatz stellt sicher, dass du erstklassige Anleitung in einer unterstützenden, ego-freien Umgebung erhältst. Wir glauben daran, vollständige Athleten aufzubauen - stark, technisch und mental belastbar.
             </p>
             
             {/* Features Grid */}
@@ -67,11 +67,11 @@ const About = () => {
             <div className="aspect-square rounded-2xl overflow-hidden gradient-border bg-card">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="text-8xl md:text-9xl font-display font-bold gradient-text">10</div>
-                  <div className="text-xl text-muted-foreground mt-2">Years of Excellence</div>
+                  <div className="text-8xl md:text-9xl font-display font-bold gradient-text">800</div>
+                  <div className="text-xl text-muted-foreground mt-2">Quadratmeter</div>
                   <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6 rounded-full" />
                   <p className="text-muted-foreground mt-6 max-w-xs mx-auto">
-                    A decade of developing champions and transforming lives through martial arts.
+                    Moderne Trainingsfläche für Kampfsport und Fitness in Sindelfingen.
                   </p>
                 </div>
               </div>

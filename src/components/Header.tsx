@@ -3,13 +3,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Schedule", href: "#schedule" },
-  { label: "Coaches", href: "#coaches" },
-  { label: "Facility", href: "#facility" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Über uns", href: "#about" },
+  { label: "Programme", href: "#programs" },
+  { label: "Trainingsplan", href: "#schedule" },
+  { label: "Trainer", href: "#coaches" },
+  { label: "Ausstattung", href: "#facility" },
+  { label: "Preise", href: "#pricing" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <span className="font-display text-2xl font-bold tracking-tight">
-              APEX<span className="gradient-text">MMA</span>
+              STM<span className="gradient-text">Performance</span>
             </span>
           </a>
 
@@ -55,7 +55,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button variant="hero" size="lg">
-              Book Free Trial
+              Kostenloses Probetraining
             </Button>
           </div>
 
@@ -85,7 +85,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-4">
                 <Button variant="hero" size="lg" className="w-full">
-                  Book Free Trial
+                  Kostenloses Probetraining
                 </Button>
               </div>
             </nav>

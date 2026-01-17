@@ -7,36 +7,44 @@ import {
 
 const faqs = [
   {
-    question: "Do I need any experience to start training?",
-    answer: "Absolutely not! We welcome complete beginners in all of our programs. Our fundamentals classes are specifically designed to teach you the basics in a safe, supportive environment. Many of our most dedicated members started with zero martial arts experience.",
+    question: "Brauche ich Erfahrung, um mit dem Training zu beginnen?",
+    answer: "Absolut nicht! Wir heißen komplette Anfänger in allen unseren Programmen willkommen. Unsere Grundlagen-Kurse sind speziell darauf ausgelegt, dir die Basics in einer sicheren, unterstützenden Umgebung beizubringen. Viele unserer engagiertesten Mitglieder haben ohne jegliche Kampfsport-Erfahrung begonnen.",
   },
   {
-    question: "What should I bring to my first class?",
-    answer: "For your first class, just bring workout clothes (t-shirt, shorts), a water bottle, and a towel. We provide all necessary equipment like gloves and pads for beginners. Once you decide to continue training, we can advise on what gear to purchase.",
+    question: "Was sollte ich zu meiner ersten Stunde mitbringen?",
+    answer: "Für deine erste Stunde bringe einfach Trainingskleidung (T-Shirt, Shorts), eine Wasserflasche und ein Handtuch mit. Wir stellen alle notwendigen Ausrüstungsgegenstände wie Handschuhe und Schützer für Anfänger zur Verfügung. Sobald du dich entscheidest, weiter zu trainieren, können wir dir bei der Auswahl der Ausrüstung beraten.",
   },
   {
-    question: "Is there a minimum contract or commitment?",
-    answer: "No long-term contracts required. Our memberships are month-to-month, and you can cancel anytime with 30 days notice. We also offer flexible class packs if you prefer not to commit to a monthly membership.",
+    question: "Gibt es eine Mindestvertragslaufzeit?",
+    answer: "Die Standardlaufzeit beträgt 24 Monate. Es gibt auch eine 12-Monats-Option oder eine monatlich kündbare Mitgliedschaft. Der Vertrag verlängert sich automatisch um 1 Monat, falls nicht vor Ablauf der Vertragslaufzeit gekündigt wird. Die Kündigung erfolgt schriftlich per E-Mail oder Einschreiben.",
   },
   {
-    question: "How often should I train as a beginner?",
-    answer: "We recommend starting with 2-3 sessions per week to allow your body to adapt. As you build conditioning and confidence, you can increase frequency. Our coaches will help you create a training schedule that matches your goals and lifestyle.",
+    question: "Wie oft sollte ich als Anfänger trainieren?",
+    answer: "Wir empfehlen, mit 2-3 Einheiten pro Woche zu beginnen, damit sich dein Körper anpassen kann. Wenn du Kondition und Selbstvertrauen aufbaust, kannst du die Häufigkeit erhöhen. Unsere Trainer helfen dir, einen Trainingsplan zu erstellen, der zu deinen Zielen und deinem Lebensstil passt.",
   },
   {
-    question: "Do kids train separately from adults?",
-    answer: "Yes, our youth program (ages 6-16) has dedicated class times with age-appropriate instruction. We focus on fundamentals, discipline, and fitness in a fun, safe environment. Parents are welcome to observe any class.",
+    question: "Trainieren Kinder getrennt von Erwachsenen?",
+    answer: "Ja, unsere Jugendprogramme haben eigene Kurszeiten mit altersgerechter Anleitung. Wir bieten Mini Club (3-6 Jahre), Kids MMA (7-11 Jahre) und Youth MMA (12-16 Jahre) an. Wir konzentrieren uns auf Grundlagen, Disziplin und Fitness in einer sicheren, spaßigen Umgebung. Eltern sind willkommen, jede Stunde zu beobachten.",
   },
   {
-    question: "What if I only want to train one discipline (like just BJJ)?",
-    answer: "That's perfectly fine! While our full membership gives you access to all programs, many members focus on one specific discipline. Our schedule offers multiple classes per week in each discipline so you can train consistently.",
+    question: "Was, wenn ich nur eine Disziplin trainieren möchte (z.B. nur BJJ)?",
+    answer: "Das ist völlig in Ordnung! Während unsere Vollmitgliedschaft dir Zugang zu allen Programmen gibt, konzentrieren sich viele Mitglieder auf eine spezifische Disziplin. Unser Stundenplan bietet mehrere Kurse pro Woche in jeder Disziplin, damit du kontinuierlich trainieren kannst.",
   },
   {
-    question: "Is MMA training safe?",
-    answer: "Safety is our top priority. All sparring is controlled and supervised, and we never force anyone to spar. Our coaches emphasize proper technique to prevent injuries, and we require all sparring participants to use appropriate protective gear.",
+    question: "Ist MMA-Training sicher?",
+    answer: "Sicherheit hat für uns oberste Priorität. Alle Sparring-Einheiten sind kontrolliert und überwacht, und wir zwingen niemanden zum Sparring. Unsere Trainer legen Wert auf richtige Technik, um Verletzungen zu vermeiden, und wir verlangen von allen Sparring-Teilnehmern, geeignete Schutzausrüstung zu tragen.",
   },
   {
-    question: "Can I try a class before signing up?",
-    answer: "Yes! We offer a free trial class for new members. This lets you experience our training, meet the coaches, and see if APEX is the right fit for you. Just contact us to schedule your trial.",
+    question: "Kann ich eine Stunde ausprobieren, bevor ich mich anmelde?",
+    answer: "Ja! Wir bieten ein kostenloses Probetraining für neue Mitglieder an. So kannst du unser Training erleben, die Trainer kennenlernen und sehen, ob STM Performance Center das Richtige für dich ist. Kontaktiere uns einfach, um dein Probetraining zu vereinbaren.",
+  },
+  {
+    question: "Wie funktioniert die Zahlung?",
+    answer: "Die Zahlung erfolgt monatlich per Lastschriftverfahren, spätestens zum ersten eines Monats. Der Monatsbeitrag wird widerruflich vom angegebenen Konto abgebucht. Alle Preise verstehen sich inklusive der gesetzlichen MwSt. von 19%. Es fällt eine einmalige Bearbeitungsgebühr von 59€ und eine jährliche Aufwandgebühr von 29€ (im Oktober) an.",
+  },
+  {
+    question: "Was passiert bei Sonderschließungen?",
+    answer: "Der Beitrag bleibt auch bei Sonderschließungen (z.B. Pandemie, Wasserschaden, Brandschaden, höhere Gewalt) zahlungspflichtig. Dies ist in unseren allgemeinen Bedingungen festgelegt.",
   },
 ];
 
@@ -49,21 +57,21 @@ const FAQ = () => {
           <div className="lg:sticky lg:top-32">
             <span className="text-primary font-display uppercase tracking-widest text-sm">FAQ</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-              QUESTIONS? <span className="gradient-text">WE'VE GOT ANSWERS</span>
+              FRAGEN? <span className="gradient-text">WIR HABEN ANTWORTEN</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              New to martial arts? Curious about what to expect? Here are answers to the most common questions we receive from prospective members.
+              Neu im Kampfsport? Neugierig, was dich erwartet? Hier sind Antworten auf die häufigsten Fragen, die wir von potenziellen Mitgliedern erhalten.
             </p>
             <div className="p-6 rounded-xl bg-card border border-border">
-              <h4 className="font-display font-bold mb-2">Still have questions?</h4>
+              <h4 className="font-display font-bold mb-2">Noch Fragen?</h4>
               <p className="text-muted-foreground text-sm mb-4">
-                Our team is happy to help. Reach out anytime and we'll get back to you within 24 hours.
+                Unser Team hilft gerne weiter. Melde dich jederzeit und wir melden uns innerhalb von 24 Stunden bei dir.
               </p>
               <a
                 href="#contact"
                 className="text-primary hover:underline text-sm font-medium"
               >
-                Contact us →
+                Kontaktiere uns →
               </a>
             </div>
           </div>

@@ -1,60 +1,87 @@
-import { Shield, Swords, Target, Dumbbell, Baby, UserCheck } from "lucide-react";
+import { Shield, Swords, Target, Dumbbell, Baby, UserCheck, Heart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const programs = [
   {
     icon: Swords,
     title: "MMA",
-    level: "All Levels",
+    level: "Alle Level",
     duration: "60-90 min",
-    frequency: "5x/week",
-    description: "Complete mixed martial arts training combining striking, wrestling, and submissions into a cohesive fighting system.",
-    benefits: ["Full-body conditioning", "Self-defense skills", "Competition prep"],
+    frequency: "Mehrmals/Woche",
+    description: "Vollständiges Mixed Martial Arts Training, das Schlag-, Ringer- und Submission-Techniken zu einem kohärenten Kampfsystem kombiniert.",
+    benefits: ["Ganzkörper-Konditionierung", "Selbstverteidigung", "Wettkampfvorbereitung"],
   },
   {
     icon: Shield,
-    title: "Brazilian Jiu-Jitsu",
-    level: "All Levels",
+    title: "BJJ / Nogi",
+    level: "Alle Level",
     duration: "60 min",
-    frequency: "6x/week",
-    description: "Master the art of ground fighting with gi and no-gi classes. Perfect for self-defense and sport competition.",
-    benefits: ["Technique-focused", "Problem-solving", "Belt progression"],
+    frequency: "Mehrmals/Woche",
+    description: "Meistere die Kunst des Bodenkampfes mit Gi- und No-Gi-Klassen. Perfekt für Selbstverteidigung und Sportwettkämpfe.",
+    benefits: ["Technikfokussiert", "Problemlösung", "Gurt-Fortschritt"],
   },
   {
     icon: Target,
-    title: "Striking Arts",
-    level: "All Levels",
+    title: "Boxen & Thai-Boxen / K1",
+    level: "Alle Level",
     duration: "60 min",
-    frequency: "5x/week",
-    description: "Boxing, Kickboxing, and Muay Thai. Develop devastating stand-up skills with world-class striking coaches.",
-    benefits: ["Cardio endurance", "Power development", "Defensive skills"],
+    frequency: "Mehrmals/Woche",
+    description: "Boxen, Kickboxen und Muay Thai. Entwickle verheerende Stand-Up-Fähigkeiten mit erstklassigen Schlag-Trainern.",
+    benefits: ["Cardio-Ausdauer", "Kraftentwicklung", "Defensive Fähigkeiten"],
   },
   {
     icon: Dumbbell,
-    title: "Strength & Conditioning",
-    level: "All Levels",
+    title: "Kraftausdauer",
+    level: "Alle Level",
     duration: "45-60 min",
-    frequency: "Daily",
-    description: "Performance-focused training to build fight-ready strength, explosive power, and unbreakable conditioning.",
-    benefits: ["Functional strength", "Athletic performance", "Injury prevention"],
+    frequency: "Mehrmals/Woche",
+    description: "Leistungsorientiertes Training zur Entwicklung kampfbereiter Kraft, explosiver Power und unzerbrechlicher Kondition.",
+    benefits: ["Funktionale Kraft", "Athletische Leistung", "Verletzungsprävention"],
   },
   {
     icon: Baby,
-    title: "Youth MMA",
-    level: "Ages 6-16",
+    title: "Mini Club",
+    level: "3-6 Jahre",
     duration: "45-60 min",
-    frequency: "3x/week",
-    description: "Safe, fun, and educational martial arts for kids. Build confidence, discipline, and physical fitness.",
-    benefits: ["Confidence building", "Anti-bullying", "Fitness habits"],
+    frequency: "Mehrmals/Woche",
+    description: "Sicheres, spaßiges und lehrreiches Kampfsport-Training für die Kleinsten. Baue Selbstvertrauen, Disziplin und körperliche Fitness auf.",
+    benefits: ["Selbstvertrauen", "Disziplin", "Fitness-Gewohnheiten"],
+  },
+  {
+    icon: Users,
+    title: "Kids MMA",
+    level: "7-11 Jahre",
+    duration: "45-60 min",
+    frequency: "Mehrmals/Woche",
+    description: "Altersgerechtes MMA-Training für Kinder. Entwickle Kampfsport-Fähigkeiten in einer sicheren und unterstützenden Umgebung.",
+    benefits: ["Selbstverteidigung", "Teamwork", "Fitness"],
   },
   {
     icon: UserCheck,
-    title: "Personal Training",
-    level: "Customized",
+    title: "Youth MMA",
+    level: "12-16 Jahre",
     duration: "60 min",
-    frequency: "Flexible",
-    description: "One-on-one coaching tailored to your specific goals. Accelerate your progress with personalized attention.",
-    benefits: ["Custom programs", "Rapid improvement", "Flexible scheduling"],
+    frequency: "Mehrmals/Woche",
+    description: "Fortgeschrittenes MMA-Training für Jugendliche. Vorbereitung auf Wettkämpfe und Entwicklung von Führungsqualitäten.",
+    benefits: ["Wettkampfvorbereitung", "Führung", "Athletische Entwicklung"],
+  },
+  {
+    icon: Heart,
+    title: "Senioren Club",
+    level: "Alle Level",
+    duration: "45-60 min",
+    frequency: "Mehrmals/Woche",
+    description: "Speziell für Senioren entwickeltes Training, das Fitness, Beweglichkeit und Wohlbefinden fördert.",
+    benefits: ["Beweglichkeit", "Gesundheit", "Gemeinschaft"],
+  },
+  {
+    icon: Sparkles,
+    title: "Yoga",
+    level: "Alle Level",
+    duration: "60 min",
+    frequency: "Wöchentlich",
+    description: "Yoga-Klassen zur Verbesserung von Flexibilität, Balance und mentaler Klarheit. Perfekt als Ergänzung zum Kampfsport-Training.",
+    benefits: ["Flexibilität", "Entspannung", "Körperbewusstsein"],
   },
 ];
 
@@ -64,12 +91,12 @@ const Programs = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-display uppercase tracking-widest text-sm">Training Programs</span>
+          <span className="text-primary font-display uppercase tracking-widest text-sm">Trainingsprogramme</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-            FIND YOUR <span className="gradient-text">DISCIPLINE</span>
+            FINDE DEINE <span className="gradient-text">DISCIPLIN</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            From complete beginners to professional fighters, we have a program designed for your goals and experience level.
+            Von kompletten Anfängern bis zu professionellen Kämpfern - wir haben ein Programm für deine Ziele und dein Erfahrungsniveau.
           </p>
         </div>
         
@@ -123,7 +150,7 @@ const Programs = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button variant="hero" size="lg">
-            View Full Class Schedule
+            Vollständigen Trainingsplan ansehen
           </Button>
         </div>
       </div>

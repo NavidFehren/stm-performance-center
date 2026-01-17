@@ -6,21 +6,21 @@ import gym3 from "@/assets/gym-3.jpg";
 import gym4 from "@/assets/gym-4.jpg";
 
 const galleryImages = [
-  { src: gym1, title: "MMA Cage & Training Area", description: "Full-size competition cage with premium Zebra mats" },
-  { src: gym2, title: "Strength & Conditioning", description: "State-of-the-art equipment including Rogue, Eleiko, and Concept2" },
-  { src: gym3, title: "Grappling Mats", description: "2,000 sq ft of dedicated mat space for BJJ and wrestling" },
-  { src: gym4, title: "Striking Zone", description: "Heavy bags, speed bags, and padded striking area" },
+  { src: gym1, title: "MMA Cage & Trainingsfläche", description: "Vollständiger Wettkampf-Cage (8x8 Meter) mit Premium-Matten" },
+  { src: gym2, title: "Fitness Bereich", description: "Moderne Ausstattung für Kraft- und Ausdauertraining" },
+  { src: gym3, title: "Große Trainingsfläche", description: "300qm große Trainingsfläche für alle Kampfsport-Disziplinen" },
+  { src: gym4, title: "Zweite Trainingsfläche", description: "100qm zusätzliche Trainingsfläche für flexibles Training" },
 ];
 
 const features = [
-  "10,000+ sq ft training facility",
-  "Full-size MMA cage",
-  "2,000 sq ft mat space",
-  "Complete strength gym",
-  "Heavy bag stations",
-  "Speed & agility area",
-  "Pro-grade locker rooms",
-  "Recovery & stretching zone",
+  "800qm Gesamtfläche",
+  "Große Trainingsfläche (300qm)",
+  "Zweite Trainingsfläche (100qm)",
+  "Cage (8x8 Meter)",
+  "Fitness Bereich",
+  "Große Umkleidekabinen mit Duschen",
+  "Eigener Saunabereich mit Lounge",
+  "Theken-Lounge für Eltern und Mitglieder",
 ];
 
 const Facility = () => {
@@ -39,12 +39,12 @@ const Facility = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-display uppercase tracking-widest text-sm">Our Facility</span>
+          <span className="text-primary font-display uppercase tracking-widest text-sm">Unsere Ausstattung</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold mt-4 mb-6">
-            TRAIN IN A <span className="gradient-text">WORLD-CLASS</span> SPACE
+            TRAINIERE IN EINEM <span className="gradient-text">ERSTKLASSIGEN</span> RAUM
           </h2>
           <p className="text-muted-foreground text-lg">
-            Purpose-built for combat sports and performance training. Every square foot designed to help you become a better athlete.
+            Zweckgebaut für Kampfsport und Performance-Training. Jeder Quadratmeter ist darauf ausgelegt, dich zu einem besseren Athleten zu machen.
           </p>
         </div>
 
@@ -117,10 +117,10 @@ const Facility = () => {
           {/* Features */}
           <div>
             <h3 className="text-2xl font-display font-bold mb-6">
-              Everything You Need to <span className="gradient-text">Perform</span>
+              Alles was du brauchst, um zu <span className="gradient-text">performen</span>
             </h3>
             <p className="text-muted-foreground mb-8">
-              Our facility was designed by fighters, for fighters. Whether you're training for competition or simply looking to improve your fitness, you'll find everything you need in one location.
+              Unsere Einrichtung wurde von Kämpfern für Kämpfer entwickelt. Ob du für Wettkämpfe trainierst oder einfach deine Fitness verbessern möchtest - du findest alles an einem Ort.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -133,9 +133,9 @@ const Facility = () => {
             </div>
 
             <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-              <h4 className="font-display font-bold mb-2">Atmosphere & Community</h4>
+              <h4 className="font-display font-bold mb-2">Atmosphäre & Gemeinschaft</h4>
               <p className="text-muted-foreground text-sm">
-                Beyond equipment, we've cultivated a training environment that's welcoming to newcomers yet challenging enough for seasoned competitors. Everyone respects each other, egos stay at the door, and the focus is always on improvement.
+                Über die Ausstattung hinaus haben wir ein Trainingsumfeld geschaffen, das Neuankömmlinge willkommen heißt und gleichzeitig genug Herausforderung für erfahrene Wettkämpfer bietet. Jeder respektiert den anderen, Egos bleiben an der Tür, und der Fokus liegt immer auf Verbesserung.
               </p>
             </div>
           </div>
