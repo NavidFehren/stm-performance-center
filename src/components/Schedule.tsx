@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Filter } from "lucide-react";
+import { Filter } from "lucide-react";
 
 const scheduleData = [
   { time: "06:00", mon: "Open Gym", tue: "S&C", wed: "Open Gym", thu: "S&C", fri: "Open Gym", sat: "Open Gym", sun: "-" },
@@ -119,34 +118,28 @@ const Schedule = () => {
           </table>
         </div>
 
-        {/* Legend & Download */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mt-8 pt-8 border-t border-border">
-          <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-primary/50" />
-              <span className="text-sm text-muted-foreground">MMA</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-blue-500/50" />
-              <span className="text-sm text-muted-foreground">BJJ</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-orange-500/50" />
-              <span className="text-sm text-muted-foreground">Striking</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-green-500/50" />
-              <span className="text-sm text-muted-foreground">Kraft/Offenes Training</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded bg-purple-500/50" />
-              <span className="text-sm text-muted-foreground">Jugend</span>
-            </div>
+        {/* Legend */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-8 pt-8 border-t border-border">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded bg-primary/50" />
+            <span className="text-sm text-muted-foreground">MMA</span>
           </div>
-          <Button variant="outline" size="lg">
-            <Download className="w-4 h-4 mr-2" />
-            Trainingsplan herunterladen
-          </Button>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded bg-blue-500/50" />
+            <span className="text-sm text-muted-foreground">BJJ</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded bg-orange-500/50" />
+            <span className="text-sm text-muted-foreground">Striking</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded bg-green-500/50" />
+            <span className="text-sm text-muted-foreground">Kraft/Offenes Training</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded bg-purple-500/50" />
+            <span className="text-sm text-muted-foreground">Jugend</span>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import LegalDialog from "./LegalDialog";
 
 const footerLinks = {
   training: [
@@ -22,9 +23,9 @@ const footerLinks = {
     { label: "Mitgliedschaft", href: "#pricing" },
   ],
   legal: [
-    { label: "Datenschutz", href: "#" },
-    { label: "AGB", href: "#" },
-    { label: "Impressum", href: "#" },
+    { label: "Datenschutz", type: "datenschutz" as const },
+    { label: "AGB", type: "agb" as const },
+    { label: "Impressum", type: "impressum" as const },
   ],
 };
 
@@ -107,9 +108,14 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {link.label}
-                  </a>
+                  <LegalDialog
+                    type={link.type}
+                    trigger={
+                      <button className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left">
+                        {link.label}
+                      </button>
+                    }
+                  />
                 </li>
               ))}
             </ul>

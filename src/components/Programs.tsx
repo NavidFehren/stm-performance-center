@@ -149,8 +149,8 @@ const Programs = () => {
         
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
-            Vollständigen Trainingsplan ansehen
+          <Button variant="hero" size="lg" asChild>
+            <a href="#schedule">Vollständigen Trainingsplan ansehen</a>
           </Button>
         </div>
       </div>

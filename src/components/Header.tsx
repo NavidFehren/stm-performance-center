@@ -54,8 +54,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="hero" size="lg">
-              Kostenloses Probetraining
+            <Button variant="hero" size="lg" asChild>
+              <a href="#contact">Kostenloses Probetraining</a>
             </Button>
           </div>
 
@@ -84,8 +84,8 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4 pt-4">
-                <Button variant="hero" size="lg" className="w-full">
-                  Kostenloses Probetraining
+                <Button variant="hero" size="lg" className="w-full" asChild>
+                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Kostenloses Probetraining</a>
                 </Button>
               </div>
             </nav>
